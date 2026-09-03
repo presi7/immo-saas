@@ -6,17 +6,7 @@ import TableauDeBord from './pages/TableauDeBord'
 import Biens from './pages/Biens'
 import Clients from './pages/Clients'
 import Visites from './pages/Visites'
-
-function EnConstruction({ titre }) {
-  return (
-    <>
-      <div className="entete-page"><h1>{titre}</h1></div>
-      <section className="bloc">
-        <p className="vide">Cet écran arrive à la prochaine étape.</p>
-      </section>
-    </>
-  )
-}
+import Paiements from './pages/Paiements'
 
 function Routage() {
   const { session, profil, chargement } = useAuth()
@@ -47,7 +37,7 @@ function Routage() {
         <Route path="biens" element={<Biens />} />
         <Route path="clients" element={<Clients />} />
         <Route path="visites" element={<Visites />} />
-        <Route path="paiements" element={<EnConstruction titre="Paiements" />} />
+        <Route path="paiements" element={<Paiements />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

@@ -650,3 +650,96 @@ a.bouton { text-decoration: none; }
   justify-content: flex-end;
   gap: 10px;
 }
+
+/* ===================================================================
+   Écran Paiements — à coller à la fin de index.css
+   =================================================================== */
+
+.resume-paiement {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.montant.gros {
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.montant.gros.reste { color: var(--ocre); }
+
+.jauge {
+  height: 6px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  background: var(--trait);
+  border-radius: 999px;
+}
+
+.jauge-remplie {
+  height: 100%;
+  background: var(--vert-vif);
+}
+
+.etiquette.paye {
+  background: rgba(47, 122, 99, 0.12);
+  color: var(--vert-vif);
+}
+
+.ajout-echeance {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.ajout-echeance input[type="number"] { width: 130px; }
+
+@media (max-width: 640px) {
+  .ajout-echeance { grid-template-columns: 1fr; }
+  .ajout-echeance input[type="number"] { width: 100%; }
+
+  .resume-paiement { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .resume-paiement > div:last-child { text-align: left !important; }
+}
+
+/* ===================================================================
+   Fiche du bien — à coller à la fin de index.css
+   =================================================================== */
+
+.fiche {
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+}
+
+.fiche > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--trait);
+}
+
+.fiche > div:last-child { border-bottom: 0; }
+
+.fiche dt {
+  color: var(--texte-doux);
+}
+
+.fiche dd {
+  margin: 0;
+  text-align: right;
+}
+
+.bloc-danger {
+  display: block;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--trait);
+  width: 100%;
+  text-align: left;
+}
+
+.grille-suivi .champ.large { grid-column: 1 / -1; }

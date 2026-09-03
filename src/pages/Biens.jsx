@@ -293,7 +293,7 @@ export default function Biens() {
       </section>
 
       {bienOuvert && (
-        <PanneauBien bien={bienOuvert} onFermer={() => setBienOuvert(null)} />
+        <PanneauBien bien={bienOuvert} onFermer={() => setBienOuvert(null)} onMaj={charger} />
       )}
     </>
   )
